@@ -1,0 +1,73 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title>flexbox-form-3</title>
+</head>
+<style>
+    input {
+        width: 200px;
+        /*align-items: flex-end;*/
+    }
+    
+    label {
+        display: block;
+        width: 120px;
+        font-weight: bold;
+        align-items: flex-start;
+    }
+    
+    label:after {
+        content: ": "
+    }
+    
+    .formField {
+        display: inline-flex;
+        width: 320px;
+        margin: 10px;
+        border: solid 1px;
+        padding: 5px;
+    }
+    
+    .buttonField {
+        margin: 10px;
+        border: solid 1px;
+        padding: 5px;
+        justify-content: center;
+        flex-basis: 100%;
+    }
+    
+    input[type=button] {
+        border-radius: 5px;
+        text-align: center;
+    }
+    
+    form {
+        display: flex;
+        flex-flow: wrap;
+        width: 750px;
+        border: solid 1px;
+    }
+</style>
+
+<body>
+    <form>
+        <div class="formField">
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName" value="">
+        </div>
+        <div class="formField">
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastName" value="">
+        </div>
+        <div class="formField">
+            <label for="email">Email</label>
+            <input type="email" name="email" value="">
+        </div>
+        <div class="buttonField formField">
+            <input type="button" name="submitButton" value="Submit">
+        </div>
+    </form>
+</body>
+
+</html>

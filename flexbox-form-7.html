@@ -1,0 +1,123 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title>flexbox-form-7</title>
+</head>
+<style>
+        input {
+        width: 200px;
+    }
+    
+    label {
+        display: block;
+        align-items: flex-start;
+        width: 120px;
+        font-weight: bold;
+    }
+    
+    label:after {
+        content: ": "
+    }
+    
+    .formLeftCol {
+        display: flex;
+        flex-flow: wrap;
+        width: 350px;
+        border: solid 1px;
+    }
+    
+    .formRightCol {
+        display: flex;
+        flex-flow: wrap;
+        width: 350px;
+        border: solid 1px;
+    }
+    
+    .formField {
+        display: inline-flex;
+        width: 320px;
+        height: 25px;
+        margin: 10px;
+        border: solid 1px;
+        padding: 5px;
+    }
+    
+    .buttonField {
+        justify-content: center;
+        /*flex-basis: 100%;*/
+        align-items: flex-start;
+        margin: 10px;
+        border: solid 1px;
+        padding: 5px;
+    }
+    
+    input[type=button] {
+        border-radius: 5px;
+        text-align: center;
+    }
+    
+    form {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        width: 750px;
+        border: solid 1px;
+        margin: 10px;
+    }
+    
+    .fieldContainer {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 10px;
+    }
+    
+    @media screen and (max-width: 769px) {
+        form {
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+            width: 350px;
+        }
+        .fieldContainer {
+            flex-wrap: wrap;
+        }
+</style>
+
+<body>
+    <form>
+        <div class="fieldContainer">
+            <div class="formLeftCol">
+                <div class="formField">
+                    <label for="firstName">First Name</label>
+                    <input type="text" name="firstName" value="">
+                </div>
+                <div class="formField">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" name="lastName" value="">
+                </div>
+                <div class="formField">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" value="">
+                </div>
+            </div>
+            <div class="formRightCol">
+                <div class="formField">
+                    <label for="address">Address</label>
+                    <input type="text" name="address" value="">
+                </div>
+                <div class="formField">
+                    <label for="city">City</label>
+                    <input type="text" name="city" value="">
+                </div>
+            </div>
+        </div>
+        <div class="buttonField formField">
+            <input type="button" name="submitButton" value="Submit">
+        </div>
+    </form>
+</body>
+
+</html>

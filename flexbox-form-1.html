@@ -1,0 +1,42 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title>flexbox-form-1</title>
+</head>
+<style>
+    input {
+        width: 200px;
+        /*align-items: flex-end;*/
+    }
+    
+    label {
+        display: block;
+        width: 120px;
+        font-weight: bold;
+        align-items: flex-start;
+    }
+    
+    label:after {
+        content: ": "
+    }
+    
+    .formField {
+        display: inline-flex;
+        width: 320px;
+        margin: 10px;
+        /*border: solid 1px;*/
+        padding: 5px;
+    }
+</style>
+
+<body>
+    <form>
+        <div class="formField">
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName" value="">
+        </div>
+    </form>
+</body>
+
+</html>

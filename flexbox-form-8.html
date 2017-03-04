@@ -1,0 +1,183 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title>flexbox-form-8</title>
+</head>
+<style>
+        input {
+        width: 200px;
+    }
+    
+    select {
+        width: 200px;
+    }
+    
+    label {
+        display: block;
+        align-items: flex-start;
+        width: 120px;
+        font-weight: bold;
+    }
+    
+    label:after {
+        content: ": "
+    }
+    
+    .formColumn {
+        display: flex;
+        flex-flow: wrap;
+        width: 350px;
+        /*border: solid 1px;*/
+    }
+    
+    .formField {
+        display: inline-flex;
+        width: 320px;
+        height: 25px;
+        margin: 10px;
+        /*border: solid 1px;*/
+        padding: 5px;
+    }
+    
+    .buttonField {
+        justify-content: center;
+        align-items: flex-start;
+        margin: 10px;
+        /*border: solid 1px;*/
+        padding: 5px;
+    }
+    
+    input[type=button] {
+        border-radius: 5px;
+        text-align: center;
+    }
+    
+    input[type=button]:hover {
+        border-color: black;
+    }
+    
+    form {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        width: 750px;
+        border: solid 1px;
+        margin: 10px;
+    }
+    
+    .fieldContainer {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 10px;
+    }
+    
+    @media screen and (max-width: 769px) {
+        form {
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+            width: 350px;
+        }
+        .fieldContainer {
+            flex-wrap: wrap;
+        }
+</style>
+
+<body>
+    <form>
+        <div class="fieldContainer">
+            <div class="formColumn">
+                <div class="formField">
+                    <label for="firstName">First Name</label>
+                    <input type="text" name="firstName" value="">
+                </div>
+                <div class="formField">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" name="lastName" value="">
+                </div>
+                <div class="formField">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" value="" placeholder="email@domain.com">
+                </div>
+            </div>
+            <div class="formColumn">
+                <div class="formField">
+                    <label for="address">Address</label>
+                    <input type="text" name="address" value="">
+                </div>
+                <div class="formField">
+                    <label for="city">City</label>
+                    <input type="text" name="city" value="">
+                </div>
+                <div class="formField">
+                    <label for="state">State</label>
+                    <select name="state">
+                        <option value="AL">Alabama</option>
+                        <option value="AK">Alaska</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="CT">Connecticut</option>
+                        <option value="DE">Delaware</option>
+                        <option value="DC">District Of Columbia</option>
+                        <option value="FL">Florida</option>
+                        <option value="GA">Georgia</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="ID">Idaho</option>
+                        <option value="IL">Illinois</option>
+                        <option value="IN">Indiana</option>
+                        <option value="IA">Iowa</option>
+                        <option value="KS">Kansas</option>
+                        <option value="KY">Kentucky</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="ME">Maine</option>
+                        <option value="MD">Maryland</option>
+                        <option value="MA">Massachusetts</option>
+                        <option value="MI">Michigan</option>
+                        <option value="MN">Minnesota</option>
+                        <option value="MS">Mississippi</option>
+                        <option value="MO">Missouri</option>
+                        <option value="MT">Montana</option>
+                        <option value="NE">Nebraska</option>
+                        <option value="NV">Nevada</option>
+                        <option value="NH">New Hampshire</option>
+                        <option value="NJ">New Jersey</option>
+                        <option value="NM">New Mexico</option>
+                        <option value="NY">New York</option>
+                        <option value="NC">North Carolina</option>
+                        <option value="ND">North Dakota</option>
+                        <option value="OH">Ohio</option>
+                        <option value="OK">Oklahoma</option>
+                        <option value="OR">Oregon</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="RI">Rhode Island</option>
+                        <option value="SC">South Carolina</option>
+                        <option value="SD">South Dakota</option>
+                        <option value="TN">Tennessee</option>
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
+                        <option value="VT">Vermont</option>
+                        <option value="VA">Virginia</option>
+                        <option value="WA">Washington</option>
+                        <option value="WV">West Virginia</option>
+                        <option value="WI">Wisconsin</option>
+                        <option value="WY">Wyoming</option>
+                    </select>
+                </div>
+                <div class="formField">
+                    <label for="zip">Zip</label>
+                    <input type="text" name="zip" value="" placeholder="00000">
+                </div>
+            </div>
+        </div>
+        <div class="buttonField formField">
+            <input type="button" name="submitButton" value="Submit">
+        </div>
+    </form>
+</body>
+
+</html>
