@@ -20,14 +20,7 @@
         content: ": "
     }
     
-    .formLeftCol {
-        display: flex;
-        flex-flow: wrap;
-        width: 50%;
-        border: solid 1px;
-    }
-    
-    .formRightCol {
+    .formColumn {
         display: flex;
         flex-flow: wrap;
         width: 50%;
@@ -67,7 +60,7 @@
 
 <body>
     <form>
-        <div class="formLeftCol">
+        <div class="formColumn">
             <div class="formField">
                 <label for="firstName">First Name</label>
                 <input type="text" name="firstName" value="">
@@ -81,7 +74,7 @@
                 <input type="email" name="email" value="">
             </div>
         </div>
-        <div class="formRightCol">
+        <div class="formColumn">
             <div class="formField">
                 <label for="address">Address</label>
                 <input type="text" name="address" value="">
